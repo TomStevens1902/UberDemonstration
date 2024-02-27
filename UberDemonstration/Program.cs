@@ -85,21 +85,21 @@ class Program
 {
     static void Main(string[] args)
     {
-
-        //Check for dupes
-        List<LondonBorough> boroughs = new List<LondonBorough>();
+        // Shuffle the boroughs to avoid duplicates
+        List<LondonBorough> boroughs = Enum.GetValues(typeof(LondonBorough)).Cast<LondonBorough>().ToList();
         Random random = new Random();
-        for(int i = 0; i<3; i++)
+        for (int i = boroughs.Count - 1; i > 0; i--)
         {
-            LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
-            boroughs.Add(randomBorough);
-            
+            int j = random.Next(i + 1);
+            LondonBorough temp = boroughs[i];
+            boroughs[i] = boroughs[j];
+            boroughs[j] = temp;
         }
-        Console.WriteLine("");
-
+        // Select how many boroughs you want displayed
+        boroughs = boroughs.Take(3).ToList();
 
         //minimum C02
-        LondonBorough minBorough = LondonBorough.Barking_and_Dagenham;
+        List<LondonBorough> minBorough = new List<LondonBorough>();
         int minCO2 = 501; //C02 Is between 0 - 100 and so will always be smaller
         //Go through each borough create a team //Create a set of 5 customers for each enum team
         List<Team> teams = new List<Team>();
@@ -114,10 +114,24 @@ class Program
             if (team.TotalCO2 < minCO2)
             {
                 minCO2 = team.TotalCO2;
-                minBorough = team.TeamBorough;
+
+                minBorough.Clear();
+                minBorough.Add(team.TeamBorough);
+            } else if (team.TotalCO2 <= minCO2)
+            {
+                minBorough.Add(team.TeamBorough);
             }
         }
         
-        Console.WriteLine($"The Winner Is: {minBorough}");
+        //display winner 
+        Console.Write($"The Winner(s) Is: ");
+        for (int i = 0; i < minBorough.Count; i++)
+        {
+            if (i != 0)
+            {
+                Console.Write(", ");
+            }
+            Console.Write($"{minBorough[i]}"); 
+        }
     }
 }

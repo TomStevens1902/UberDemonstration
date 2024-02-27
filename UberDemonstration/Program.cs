@@ -117,10 +117,10 @@ class Program
         for (int i = 0; i < 3; i++)
         {
             LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
-            Colorful.Console.WriteLine($"Borough: {randomBorough}");
+            System.Console.WriteLine($"Borough: {randomBorough}", Color.Green);
             boroughs.Add(randomBorough);
         }
-        Colorful.Console.WriteLine("");
+        System.Console.WriteLine("");
 
         // Create a dictionary to store CO2 totals for each borough
         Dictionary<LondonBorough, int> boroughCO2 = new Dictionary<LondonBorough, int>();
@@ -130,29 +130,26 @@ class Program
         {
             Team team = new Team(borough);
             boroughCO2.Add(borough, team.TotalCO2);
-            Colorful.Console.WriteLine($"Total C02: {team.TotalCO2}");
-            Colorful.Console.WriteLine("");
+            System.Console.WriteLine($"Total C02: {team.TotalCO2}");
+            System.Console.WriteLine("");
         }
 
-        // Group boroughs by CO2 total
-        var groupedBoroughs = boroughCO2.GroupBy(x => x.Value);
+        // Sort the dictionary by CO2 total
+        var sortedBoroughCO2 = boroughCO2.OrderBy(x => x.Value);
 
         // Display leaderboard
-        Colorful.Console.WriteLine("Leaderboard:");
+        System.Console.WriteLine("Leaderboard:");
+        System.Console.WriteLine("|-----|---------------------------|-------------|");
+        System.Console.WriteLine("|  #  | Borough                   | CO2 Total   |");
+        System.Console.WriteLine("|-----|---------------------------|-------------|");
 
-        var table = new ConsoleTable(" ", "Borough", "CO2 Total");
         int rank = 1;
-        int prevValue = 0;
-        foreach (var group in groupedBoroughs.OrderBy(x => x.Key))
+        foreach (var item in sortedBoroughCO2)
         {
-            foreach (var item in group)
-            {
-                table.AddRow(rank, item.Key, item.Value);
-            }
-
+            System.Console.WriteLine($"|  {rank,-2} | {item.Key,-25} | {item.Value,-11} |", Color.White);
             rank++;
         }
-        // Display table
-        table.Write(Format.Minimal);
+
+        System.Console.WriteLine("|-----|---------------------------|-------------|");
     }
 }

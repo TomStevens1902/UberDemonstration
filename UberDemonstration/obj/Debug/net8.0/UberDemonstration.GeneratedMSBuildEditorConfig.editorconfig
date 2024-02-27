@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UberDemonstration
-build_property.ProjectDir = C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\
+build_property.ProjectDir = C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -54,7 +54,7 @@ public struct Team
         for (int i = 0; i < 5; i++)
         {
             Customer customer = new Customer(TeamBorough);
-            Console.WriteLine($"Name: {customer.Name} \t Borough: {TeamBorough} \t CO2: {customer.CO2}");
+            Console.WriteLine($"Name: {customer.Name} \t CO2: {customer.CO2}");
             CustomerList.Add(customer);
 
             //Calculate an overall CO2 for each team
@@ -92,7 +92,6 @@ class Program
         for(int i = 0; i<3; i++)
         {
             LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
-            Console.WriteLine($"Borough: {randomBorough}");
             boroughs.Add(randomBorough);
             
         }
@@ -114,7 +113,6 @@ class Program
             //Compare each team lowest = winner
             if (team.TotalCO2 < minCO2)
             {
-                Console.WriteLine("swap");
                 minCO2 = team.TotalCO2;
                 minBorough = team.TeamBorough;
             }

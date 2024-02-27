@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tom\\Documents\\GithubRepos\\C-Sharp\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj": {}
+    "C:\\Users\\Tom\\Documents\\GithubRepos\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tom\\Documents\\GithubRepos\\C-Sharp\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj": {
+    "C:\\Users\\Tom\\Documents\\GithubRepos\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tom\\Documents\\GithubRepos\\C-Sharp\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj",
+        "projectUniqueName": "C:\\Users\\Tom\\Documents\\GithubRepos\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj",
         "projectName": "UberDemonstration",
-        "projectPath": "C:\\Users\\Tom\\Documents\\GithubRepos\\C-Sharp\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj",
+        "projectPath": "C:\\Users\\Tom\\Documents\\GithubRepos\\UberDemonstration\\UberDemonstration\\UberDemonstration.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tom\\Documents\\GithubRepos\\C-Sharp\\UberDemonstration\\UberDemonstration\\obj\\",
+        "outputPath": "C:\\Users\\Tom\\Documents\\GithubRepos\\UberDemonstration\\UberDemonstration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

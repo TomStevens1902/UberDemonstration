@@ -61,7 +61,7 @@ public struct Team
         for (int i = 0; i < 5; i++)
         {
             Customer customer = new Customer(TeamBorough);
-            Colorful.Console.WriteLine($"Name: {customer.Name,-10} | Borough: {TeamBorough,-20} | CO2: {customer.CO2}");
+            Colorful.Console.WriteLine($"Name: {customer.Name,-10} | CO2: {customer.CO2}");
             CustomerList.Add(customer);
 
             // Calculate an overall CO2 for each team
@@ -77,7 +77,7 @@ public struct Customer
     public LondonBorough Borough;
     public int CO2;
 
-    private static string[] names = { "John", "Alice", "David", "Emily", "Michael", "Sophia", "William", "Olivia" };
+    private static string[] names = { "Liam", "Emma", "Noah", "Ava", "Evan", "Ella", "Owen", "Grace", "Luke", "Lily", "Eli", "Ruby", "Aiden", "Maya", "Caleb", "Chloe" };
     private static Random random = new Random();
 
     public Customer(LondonBorough borough)
@@ -113,10 +113,8 @@ class Program
         for (int i = 0; i < 3; i++)
         {
             LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
-            Colorful.Console.WriteLine($"Borough: {randomBorough}");
             boroughs.Add(randomBorough);
         }
-        Colorful.Console.WriteLine("");
 
         // Create a dictionary to store CO2 totals for each borough
         Dictionary<LondonBorough, int> boroughCO2 = new Dictionary<LondonBorough, int>();

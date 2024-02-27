@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UberDemonstration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82a2cbfe78c8b1d532aad4dd0226ccb3747df16f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6b94c0278a2b3c81122040298fad2705b412e2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("UberDemonstration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UberDemonstration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

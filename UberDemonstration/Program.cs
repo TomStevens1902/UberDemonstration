@@ -43,7 +43,7 @@ public enum LondonBorough
 
 }
 
-// teams
+// Struct for teams
 public struct Team
 {
     public LondonBorough TeamBorough;
@@ -61,7 +61,7 @@ public struct Team
         for (int i = 0; i < 5; i++)
         {
             Customer customer = new Customer(TeamBorough);
-            Colorful.Console.WriteLine($"Name: {customer.Name,-10} | CO2: {customer.CO2}");
+            Colorful.Console.WriteLine($"Name: {customer.Name,-10} | Miles: {customer.Miles,-5} | CO2: {customer.CO2}");
             CustomerList.Add(customer);
 
             // Calculate an overall CO2 for each team
@@ -70,21 +70,26 @@ public struct Team
     }
 }
 
-// struct for customers (randomised)
+// Struct for customers (randomized)
 public struct Customer
 {
     public string Name;
     public LondonBorough Borough;
+    public int Miles;
     public int CO2;
 
-    private static string[] names = { "Liam", "Emma", "Noah", "Ava", "Evan", "Ella", "Owen", "Grace", "Luke", "Lily", "Eli", "Ruby", "Aiden", "Maya", "Caleb", "Chloe" };
+    private static string[] names = { "John", "Alice", "David", "Emily", "Michael", "Sophia", "William", "Olivia" };
     private static Random random = new Random();
+
+    // Emission factor: grams per mile
+    private const int EmissionFactor = 120; // Example value
 
     public Customer(LondonBorough borough)
     {
         Name = names[random.Next(names.Length)];
         Borough = borough;
-        CO2 = random.Next(1, 100); ;
+        Miles = random.Next(1, 100); // Random miles traveled
+        CO2 = Miles * EmissionFactor; // Calculate CO2 emissions based on miles and emission factor
     }
 }
 
@@ -97,24 +102,25 @@ class Program
         while (input == "")
         {
             input = System.Console.ReadLine();
-            if(input == "")
+            if (input == "")
             {
                 System.Console.Clear();
                 DisplayInfo();
             }
         }
     }
-
     static void DisplayInfo()
     {
-        // Check for dupes
+        // Check for duplicates
         List<LondonBorough> boroughs = new List<LondonBorough>();
         Random random = new Random();
         for (int i = 0; i < 3; i++)
         {
             LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
+            Colorful.Console.WriteLine($"Borough: {randomBorough}");
             boroughs.Add(randomBorough);
         }
+        Colorful.Console.WriteLine("");
 
         // Create a dictionary to store CO2 totals for each borough
         Dictionary<LondonBorough, int> boroughCO2 = new Dictionary<LondonBorough, int>();

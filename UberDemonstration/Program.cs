@@ -140,21 +140,19 @@ class Program
         // Display leaderboard
         Colorful.Console.WriteLine("Leaderboard:");
 
+        var table = new ConsoleTable(" ", "Borough", "CO2 Total");
         int rank = 1;
+        int prevValue = 0;
         foreach (var group in groupedBoroughs.OrderBy(x => x.Key))
         {
-            Colorful.Console.WriteLine($"Rank {rank}:");
-            var table = new ConsoleTable("Borough", "CO2 Total");
-
             foreach (var item in group)
             {
-                table.AddRow(item.Key, item.Value);
+                table.AddRow(rank, item.Key, item.Value);
             }
-
-            // Display table
-            table.Write(Format.Minimal);
 
             rank++;
         }
+        // Display table
+        table.Write(Format.Minimal);
     }
 }

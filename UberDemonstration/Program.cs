@@ -70,7 +70,7 @@ public struct Customer
     public LondonBorough Borough;
     public int CO2;
 
-    private static string[] names = { "John", "Alice", "David", "Emily", "Michael", "Sophia", "William", "Olivia" };
+    private static string[] names = { "Liam", "Emma", "Noah", "Ava", "Evan", "Ella", "Owen", "Grace", "Luke", "Lily", "Eli", "Ruby", "Aiden", "Maya", "Caleb", "Chloe" };
     private static Random random = new Random();
 
     public Customer(LondonBorough borough)
@@ -85,53 +85,42 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Shuffle the boroughs to avoid duplicates
-        List<LondonBorough> boroughs = Enum.GetValues(typeof(LondonBorough)).Cast<LondonBorough>().ToList();
+        // Check for dupes
+        List<LondonBorough> boroughs = new List<LondonBorough>();
         Random random = new Random();
-        for (int i = boroughs.Count - 1; i > 0; i--)
+        for (int i = 0; i < 3; i++)
         {
-            int j = random.Next(i + 1);
-            LondonBorough temp = boroughs[i];
-            boroughs[i] = boroughs[j];
-            boroughs[j] = temp;
+            LondonBorough randomBorough = (LondonBorough)random.Next(Enum.GetValues(typeof(LondonBorough)).Length);
+            boroughs.Add(randomBorough);
         }
-        // Select how many boroughs you want displayed
-        boroughs = boroughs.Take(3).ToList();
 
-        //minimum C02
-        List<LondonBorough> minBorough = new List<LondonBorough>();
-        int minCO2 = 501; //C02 Is between 0 - 100 and so will always be smaller
-        //Go through each borough create a team //Create a set of 5 customers for each enum team
-        List<Team> teams = new List<Team>();
-        foreach (LondonBorough borough in boroughs)
+        // Create a dictionary to store CO2 totals for each borough
+        Dictionary<LondonBorough, int> boroughCO2 = new Dictionary<LondonBorough, int>();
+
+        // Go through each borough, create a team, and calculate total CO2
+        foreach (LondonBorough borough in Enum.GetValues(typeof(LondonBorough)))
         {
             Team team = new Team(borough);
-            teams.Add(team);
+            boroughCO2.Add(borough, team.TotalCO2);
             Console.WriteLine($"Total C02: {team.TotalCO2}");
             Console.WriteLine("");
-
-            //Compare each team lowest = winner
-            if (team.TotalCO2 < minCO2)
-            {
-                minCO2 = team.TotalCO2;
-
-                minBorough.Clear();
-                minBorough.Add(team.TeamBorough);
-            } else if (team.TotalCO2 <= minCO2)
-            {
-                minBorough.Add(team.TeamBorough);
-            }
         }
-        
-        //display winner 
-        Console.Write($"The Winner(s) Is: ");
-        for (int i = 0; i < minBorough.Count; i++)
+
+        // Group boroughs by CO2 total
+        var groupedBoroughs = boroughCO2.GroupBy(x => x.Value);
+
+        // Display leaderboard
+        Console.WriteLine("Leaderboard:");
+
+        int rank = 1;
+        foreach (var group in groupedBoroughs.OrderBy(x => x.Key))
         {
-            if (i != 0)
+            Console.WriteLine($"Rank {rank}:");
+            foreach (var item in group)
             {
-                Console.Write(", ");
+                Console.WriteLine($"{item.Key} (CO2: {item.Value})");
             }
-            Console.Write($"{minBorough[i]}"); 
+            rank++;
         }
     }
 }

@@ -28,3 +28,7 @@ C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug
 C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.pdb
 C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.genruntimeconfig.cache
 C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug\net8.0\ref\UberDemonstration.dll
+C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\bin\Debug\net8.0\Colorful.Console.dll
+C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\bin\Debug\net8.0\ConsoleTables.dll
+C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.csproj.AssemblyReference.cache
+C:\Users\Tom\Documents\GithubRepos\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemo.90BBD65D.Up2Date

@@ -1,0 +1,15 @@
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\bin\Debug\net8.0\UberDemonstration.exe
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\bin\Debug\net8.0\UberDemonstration.deps.json
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\bin\Debug\net8.0\UberDemonstration.runtimeconfig.json
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\bin\Debug\net8.0\UberDemonstration.dll
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\bin\Debug\net8.0\UberDemonstration.pdb
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.AssemblyInfoInputs.cache
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.AssemblyInfo.cs
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.sourcelink.json
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.dll
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\refint\UberDemonstration.dll
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.pdb
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\UberDemonstration.genruntimeconfig.cache
+C:\Users\Tom\Documents\GithubRepos\C-Sharp\UberDemonstration\UberDemonstration\obj\Debug\net8.0\ref\UberDemonstration.dll
